@@ -1,6 +1,6 @@
 function Age(props){
     return <div>
-             {props.age}
+            {props.age}
         </div>
 }
 
