@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return <div>
-          <Welcome name = "John" age = {16}/>
+          <Welcome name = "Paolo"/>
         </div>
 }
 
