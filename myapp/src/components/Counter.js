@@ -11,10 +11,10 @@ export default class Counter extends React.Component {
         setInterval(() => {
             this.setState((state) => {
                 return {
-                    count : state.count + 1
+                    count : state.count + this.props.incrementBy
                 }
             })
-        }, 1000)
+        }, this.props.incrementInterval)
     }
 
     render() {
