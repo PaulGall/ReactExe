@@ -1,9 +1,9 @@
-import Welcome from './components/Welcome';
+import InteractiveWelcome from './components/InteractiveWelcome';
 import './App.css';
 
 function App() {
   return <div>
-          <Welcome name = "John" age = {16}/>
+          <InteractiveWelcome/>
         </div>
 }
 
