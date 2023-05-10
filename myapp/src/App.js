@@ -1,9 +1,12 @@
-import UncontrolledLogin from './components/UncontrolledLogin';
+import TodoList from './components/TodoList';
 import './App.css';
 
 function App() {
+
+  const arrNames = ['Paolo', 'Margot', 'Alessandro'];
+
   return <div>
-          <UncontrolledLogin/>
+          <TodoList name = {arrNames}/>
         </div>
 }
 
