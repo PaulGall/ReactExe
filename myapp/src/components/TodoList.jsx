@@ -16,6 +16,11 @@ const TodoList = (props) => {
     setItem([...reset]);
     clearList.current = [];
   };
+  const setRemoveItemHandler = (id) => {
+    const updateItems = [...item];
+    updateItems.splice(id, 1);
+    setItem(updateItems);
+  };
 
   return (
     <>
@@ -24,15 +29,28 @@ const TodoList = (props) => {
         onChange={(event) => setName(event.target.value)}
         ref={clearInput}
       />
+
       <button type="button" onClick={setNameHandler}>
         Add Item
       </button>
+
       <button type="button" onClick={setResetHandler}>
         Reset List
       </button>
+
       <ul ref={clearList} onChange={(event) => setReset(event.target.value)}>
-        {item.map((item, index) => (
-          <li key={index}>{item}</li>
+        {item.map((item, id) => (
+          <>
+            <li key={id} index={id}>
+              {item}
+            </li>
+            <button
+              onClick={() => {
+                setRemoveItemHandler(id);
+              }}>
+              Rimuovi item
+            </button>
+          </>
         ))}
       </ul>
     </>
