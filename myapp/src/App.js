@@ -1,9 +1,9 @@
-import Counter from './components/Counter';
+import ClickTracker from './components/ClickTracker';
 import './App.css';
 
 function App() {
   return <div>
-          <Counter/>
+          <ClickTracker/>
         </div>
 }
 
