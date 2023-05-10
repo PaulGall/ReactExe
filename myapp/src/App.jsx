@@ -1,9 +1,9 @@
-import Counter from './components/Counter';
+import FormLogin from './components/FormLogin';
 import './App.css';
 
 function App() {
   return <div>
-          <Counter/>
+          <FormLogin/>
         </div>
 }
 
