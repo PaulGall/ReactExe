@@ -48,7 +48,7 @@ const TodoList = (props) => {
               onClick={() => {
                 setRemoveItemHandler(id);
               }}>
-              Rimuovi item
+              Delete item
             </button>
           </>
         ))}
