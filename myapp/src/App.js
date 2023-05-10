@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return <div>
-          <Counter incrementBy = {1} incrementInterval = {1000}/>
+           <Counter incrementBy = {1} incrementInterval = {1000}/>
         </div>
 }
 
