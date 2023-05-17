@@ -1,12 +1,10 @@
-import Counter from "./components/Counter";
-import "./App.css";
+import Form from './components/Form';
+import './App.css';
 
 function App() {
-  return (
-    <div>
-      <Counter />
-    </div>
-  );
+  return <div>
+          <Form />
+        </div>
 }
 
 export default App;
