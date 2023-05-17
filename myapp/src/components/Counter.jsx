@@ -1,30 +1,15 @@
-import { useState } from "react";
-import SideEffect from "./SideEffect";
+import { useCounter } from "./UseCounter";
 
 function Counter() {
-  const [counter, setCount] = useState(0);
-
-  function onCounterChange() {
-    console.log(`Il contatore è ${counter}`);
-  }
-
-  const increase = () => {
-    setCount((count) => count + 1);
-  };
-
-  const decrease = () => {
-    if (counter > 0) {
-      setCount((count) => count - 1);
-    }
-  };
+  const { counter, increment, decrement, reset } = useCounter();
 
   return (
-    <SideEffect
-      increase={increase}
-      decrease={decrease}
-      counter={counter}
-      change={onCounterChange({ counter })}
-    />
+    <>
+      <h2>Count: {counter}</h2>
+      <button onClick={increment}>Incrementa</button>
+      <button onClick={decrement}>Decrementa</button>
+      <button onClick={reset}>Resetta</button>
+    </>
   );
 }
 
