@@ -1,10 +1,12 @@
-import GithubUser from './components/GithubUser';
-import './App.css';
+import GithubUserList from "./components/GithubUserList";
+import "./App.css";
 
 function App() {
-  return <div>
-          <GithubUser username='PaoloGallitelli'/>
-        </div>
+  return (
+    <div>
+      <GithubUserList />
+    </div>
+  );
 }
 
 export default App;
