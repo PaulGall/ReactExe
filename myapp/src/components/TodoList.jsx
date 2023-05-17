@@ -16,6 +16,7 @@ const TodoList = (props) => {
     setItem([...reset]);
     clearList.current = [];
   };
+  
   const setRemoveItemHandler = (id) => {
     const updateItems = [...item];
     updateItems.splice(id, 1);
@@ -38,21 +39,7 @@ const TodoList = (props) => {
         Reset List
       </button>
 
-      <ul ref={clearList} onChange={(event) => setReset(event.target.value)}>
-        {item.map((item, id) => (
-          <>
-            <li key={id} index={id}>
-              {item}
-            </li>
-            <button
-              onClick={() => {
-                setRemoveItemHandler(id);
-              }}>
-              Rimuovi item
-            </button>
-          </>
-        ))}
-      </ul>
+      {props.render(item, setRemoveItemHandler)}
     </>
   );
 };
