@@ -1,18 +1,9 @@
-import Counter from './components/Counter';
+import GithubUser from './components/GithubUser';
 import './App.css';
-import { useState } from 'react';
 
 function App() {
-
-  const [showCounter, setShowCounter] = useState(true);
-    const handleShowCounter = () => {
-      setShowCounter(counter => !counter);
-    }
-
-
   return <div>
-          <button onClick={handleShowCounter}>Elimina/Aggiungi Componente</button>
-          {showCounter && <Counter showCounter={showCounter}/>}
+          <GithubUser username='PaoloGallitelli'/>
         </div>
 }
 
