@@ -1,39 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
+
 
 function Counter() {
-  const [counter, setCount] = useState(0);
 
-  useEffect(() => {
-    console.log(`il counter è montato`);
-    return () => {
-      console.log("il componente è smontato");
-    };
-  }, []);
+    const [counter, setCount] = useState(0);
 
-  useEffect(() => {
-    console.log(`il counter è ${counter}`);
-    return () => {
-      console.log(`il counter era ${counter}`);
-    };
-  }, [counter]);
+    useEffect(() => {
+        console.log(`il counter è montato`)
+        return () => {
+            console.log('il counter è smontato')
+        }
+    }, [])
 
-  const increase = () => {
-    setCount((count) => count + 1);
-  };
+    useEffect(() =>{
+      let intervallo = setInterval(function () {setCount(counter + 1)},1000)
 
-  const decrease = () => {
-    if (counter > 0) {
-      setCount((count) => count - 1);
-    }
-  };
+      return () => {
+        clearInterval(intervallo, 1000)
+      }
+    }, [counter])
 
-  return (
-    <>
-      <h2>Count: {counter}</h2>
-      <button onClick={increase}>Incrementa</button>
-      <button onClick={decrease}>Decrementa</button>
-    </>
-  );
+    return (
+        <div>
+          <h1>{counter}</h1>
+        </div>
+      );
 }
 
-export default Counter;
+export default Counter
