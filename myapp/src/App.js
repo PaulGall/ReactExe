@@ -1,10 +1,10 @@
-import GithubUserList from "./components/GithubUserList";
+import GithubUser from "./components/GithubUser";
 import "./App.css";
 
 function App() {
   return (
     <div>
-      <GithubUserList />
+      <GithubUser username="PuglisiAlfio" />
     </div>
   );
 }
