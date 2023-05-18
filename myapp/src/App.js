@@ -1,10 +1,10 @@
-import Counter from "./components/Counter";
+import FilteredList from "./components/FilteredList";
 import "./App.css";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <FilteredList />
     </div>
   );
 }
