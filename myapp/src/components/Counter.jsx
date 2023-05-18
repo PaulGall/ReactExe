@@ -1,4 +1,4 @@
-import { useCounter } from "./UseCounter";
+import { useCounter } from "./useCounter";
 
 function Counter() {
   const { counter, increment, decrement, reset } = useCounter();
