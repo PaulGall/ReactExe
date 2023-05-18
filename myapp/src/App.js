@@ -1,20 +1,7 @@
-import { useState } from "react";
-import GithubUser from "./components/GithubUser";
-import "./App.css";
+import Car from "./components/Car";
 
 function App() {
-  const [username, setUsername] = useState("");
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={username}
-        onChange={(event) => setUsername(event.target.value)}
-      />
-      <GithubUser username={username} />
-    </div>
-  );
+  return <Car />;
 }
 
 export default App;
