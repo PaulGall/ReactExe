@@ -1,15 +1,16 @@
-import { Link, Route, Routes } from "react-router-dom";
-import ShowGithubUser from "./components/ShowGithubUser";
+import { Route, Routes } from "react-router-dom";
+import GithubUserList from "./components/GithubUserList";
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<ShowGithubUser />} />
-        <Route path="user/:username" element={<ShowGithubUser />} />
-        <Route path="*" element={<p>Not found</p>} />
+        <Route path="user">
+          <Route path="list" element={<GithubUserList />}>
+            <Route index element={<p>Add a user and select it</p>} />
+          </Route>
+        </Route>
       </Routes>
-      <Link to="/user/PaulGall">Go to User</Link>
     </div>
   );
 }

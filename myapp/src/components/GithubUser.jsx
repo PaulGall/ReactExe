@@ -7,7 +7,6 @@ function GithubUser(props) {
     fetch(`https://api.github.com/users/${props.username}`)
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
         setData(json);
       });
   }, [props.username]);

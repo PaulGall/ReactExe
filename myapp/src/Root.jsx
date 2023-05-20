@@ -1,14 +1,18 @@
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import { Route, Routes } from "react-router-dom";
+import GithubUserList from "./components/GithubUserList";
 
-function Root() {
+function App() {
   return (
-    <>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </>
+    <div>
+      <Routes>
+        <Route path="user">
+          <Route path="list" element={<GithubUserList />}>
+            <Route index element={<p>Add a user and select it</p>} />
+          </Route>
+        </Route>
+      </Routes>
+    </div>
   );
 }
 
-export default Root;
+export default App;
