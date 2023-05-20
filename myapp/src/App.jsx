@@ -4,7 +4,7 @@ import ShowGithubUser from "./components/ShowGithubUser";
 function App() {
   return (
     <div>
-      <Link to="/user/Paul">Go to User</Link>
+      <Link to="/user/PaulGall">Go to User</Link>
       <Routes>
         <Route path="user/:username" element={<ShowGithubUser />} />
       </Routes>
