@@ -1,14 +1,23 @@
-import { useCounter } from "./UseCounter";
+import { useState } from "react";
 
 function Counter() {
-  const { counter, increment, decrement, reset } = useCounter();
+  const [counter, setCount] = useState(0);
+
+  const increase = () => {
+    setCount((count) => count + 1);
+  };
+
+  const decrease = () => {
+    if (counter > 0) {
+      setCount((count) => count - 1);
+    }
+  };
 
   return (
     <>
       <h2>Count: {counter}</h2>
-      <button onClick={increment}>Incrementa</button>
-      <button onClick={decrement}>Decrementa</button>
-      <button onClick={reset}>Resetta</button>
+      <button onClick={increase}>Incrementa</button>
+      <button onClick={decrease}>Decrementa</button>
     </>
   );
 }
